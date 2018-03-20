@@ -14,10 +14,10 @@ var Handler = function(app) {
  * @param  {Function} next    next step callback
  * @return {Void}
  */
-Handler.prototype.entry = function(msg, session, next) {
-	console.log(msg);
-	next(null, {code: 200, msg: 'game server is ok.'});
-};
+// Handler.prototype.entry = function(msg, session, next) {
+// 	console.log(msg);
+// 	next(null, {code: 200, msg: 'game server is ok.'});
+// };
 
 /**
  * Publish route for mqtt connector.
@@ -27,14 +27,14 @@ Handler.prototype.entry = function(msg, session, next) {
  * @param  {Function} next    next step callback
  * @return {Void}
  */
-Handler.prototype.publish = function(msg, session, next) {
-	console.log("GET A CONNECTIONNNNNNNNNNNN2");
-	var result = {
-		topic: 'publish',
-		payload: JSON.stringify({code: 200, msg: 'publish message is ok.'})
-	};
-	next(null, result);
-};
+// Handler.prototype.publish = function(msg, session, next) {
+// 	console.log("GET A CONNECTIONNNNNNNNNNNN2");
+// 	var result = {
+// 		topic: 'publish',
+// 		payload: JSON.stringify({code: 200, msg: 'publish message is ok.'})
+// 	};
+// 	next(null, result);
+// };
 
 /**
  * Subscribe route for mqtt connector.
@@ -44,11 +44,11 @@ Handler.prototype.publish = function(msg, session, next) {
  * @param  {Function} next    next step callback
  * @return {Void}
  */
-Handler.prototype.subscribe = function(msg, session, next) {
-	console.log("GET A CONNECTIONNNNNNNNNNNN3");
-	var result = {
-		topic: 'subscribe',
-		payload: JSON.stringify({code: 200, msg: 'subscribe message is ok.'})
-	};
-	next(null, result);
-};
+// Handler.prototype.subscribe = function(msg, session, next) {
+// 	console.log("GET A CONNECTIONNNNNNNNNNNN3");
+// 	var result = {
+// 		topic: 'subscribe',
+// 		payload: JSON.stringify({code: 200, msg: 'subscribe message is ok.'})
+// 	};
+// 	next(null, result);
+// };
